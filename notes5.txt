@@ -1,0 +1,359 @@
+a)Print the odd numbers in an array:
+
+1)Anonymous Function:
+let arr=[1,2,3,4,5,6,7,8,9]
+let odd = function(arr) {
+    for(let i=0; i<arr.length;i++){
+        if(arr[i]%2!==0){
+            console.log(arr[i])
+        }  
+    }
+}
+odd(arr);
+
+2)IIFE Function:
+let arr=[1,2,3,4,5,6,7,8,9]
+(function (arr){
+    for (let i=0;i<arr.length;i++){
+        if(arr[i]%2!==0){
+            console.log(arr[i])
+        }
+    }
+})
+(arr)
+
+3)Arrow Function:
+let arr=[1,2,3,4,5,6,7,8,9]
+var odd =(arr)=>{
+    for(let i=0;i<arr.length;i++){
+        if(ar[i]%2!==0){
+            console.log(arr[i])
+        }
+    }
+}
+odd(arr)
+
+b)Convert all the strings to title caps in a string array:
+
+1)Anonymous Function:
+var stringArray=[" welcome to india"];
+var titlecase=function(stringArray){
+   for(let i=0;i<stringArray.length;i++){
+      str=stringArray[i];
+   arr= str.split(" ");
+   for(let j=i;j<arr.length;j++){
+      namestr=arr[j];
+      firstletter=namestr.charAt(0).toUpperCase()
+      secondletter=namestr.slice(1,namestr.length);
+      arr[j]=firstletter+secondletter;
+   }
+}
+   console.log(arr.join(" "));
+}
+titlecase(stringArray)
+
+2)IIFE Function:
+(function(stringArray){
+   for(let i=0;i<stringArray.length;i++){
+       str=stringArray[i];
+   arr= str.split(" ");
+   for(let j=i;j<arr.length;j++){
+      namestr=arr[j];
+      firstletter=namestr.charAt(0).toUpperCase()
+      secondletter=namestr.slice(1,namestr.length);
+      arr[j]=firstletter+secondletter;
+      }
+   }
+   console.log(arr.join(" "));
+   })
+   ([" welcome to india"])
+
+3)Arrow Function:
+var stringArray=[" welcome to india"];
+var titlecase=(stringArray)=>{
+      for(let i=0;i<stringArray.length;i++){
+         str=stringArray[i];
+      arr= str.split(" ");
+      for(let j=i;j<arr.length;j++){
+         namestr=arr[j];
+         firstletter=namestr.charAt(0).toUpperCase()
+         secondletter=namestr.slice(1,namestr.length);
+         arr[j]=firstletter+secondletter;
+      }
+   }
+      console.log(arr.join(" "));
+   }
+   titlecase(stringArray)
+
+c) Sum of all the numbers in an array:
+
+1)Anonymous Function:
+let num=[1,2,3,4,5,6,7,8]
+var sumofarr = function(num){
+    var sum=0;
+    for(let i=0;i<num.length;i++){
+        sum=sum+num[i]
+    }
+    console.log(sum)
+}
+sumofarr(num);
+
+2)IIFE Function:
+(function (arr){
+    var sum=0;
+    for (let i=0;i<arr.length;i++){
+        sum = sum+arr[i]
+        
+    }
+    console.log(sum)
+})
+([1,2,3,4,5,6,7,8])
+
+3)Arrow Function:
+let num=[1,2,3,4,5,6,7,8]
+var sumofarr=(arr)=>{
+    var sum=0;
+    for (let i=0;i<arr.length;i++){
+         sum = sum+arr[i]
+     }
+      console.log(sum)
+}
+sumofarr(num)
+
+d) Return all the prime number in an array:
+
+1)Anonymous Function:
+ let numArray=[121,456,101,899,7]
+var primeNum = function(numArray) {
+    numArray = numArray.filter((number) => {
+        for (var i = 2; i < number; i++) {
+            if (number % i === 0) {
+            return false
+            };
+        }
+        return true;
+      });
+      console.log(numArray);
+}
+ primeNum(numArray)
+
+ 2)IIFE Function:
+ (function (numArray){
+   var  test=numArray.filter((number)=>{
+        for(let i=2;i<number;i++){
+            if(number%i===0){
+                return false;
+            }   
+        }
+        return true;
+    
+    })
+  console.log(test)
+
+})
+([121,456,101,899,7]);
+
+3) Arrow Function:
+var numArray=[121,456,101,899,7];
+var primeNum = (numArray)=> {
+    numArray = numArray.filter((number) => {
+        for (var i = 2; i < number; i++) {
+          if (number % i === 0) {
+            return false
+            };
+        }
+        return true;
+      });
+      console.log(numArray);
+}
+ primeNum(numArray)
+
+e)Return all the Palindromes in an array:
+
+1)Anonymous Function:
+var stringArray = ["121", "221", "343", "141", "533"];
+   var palindrome=function(stringArray){
+    var a =[];
+   for(let i=0;i<stringArray.length;i++){
+    Number=stringArray[i];
+    var newnumber="";
+    for(let j=Number.length-1;j>=0;j--){
+       newnumber = newnumber+Number[j];
+    }
+    if(Number===newnumber){
+       a.push(Number)
+    }
+}
+console.log(a);
+}
+palindrome(stringArray)
+
+2) IIFE Function:
+ (function(stringArray){
+    var b=[];
+    for(let i=0;i<stringArray.length;i++){
+        Number= stringArray[i];
+        var newnumber="";
+        for(let j=Number.length-1;j>=0;j--){
+            newnumber=newnumber+Number[j]
+        }
+         if(Number===newnumber){
+            b.push(Number)
+         }
+      }
+      console.log(b);
+    })
+    (["121", "221", "343", "141", "533"])
+
+3)Arrow Function:
+var stringArray = ["121", "221", "343", "141", "533"];
+   var palindrome=(stringArray)=>{
+    var a =[];
+   for(let i=0;i<stringArray.length;i++){
+    Number=stringArray[i];
+    var newnumber="";
+    for(let j=Number.length-1;j>=0;j--){
+      newnumber = newnumber+Number[j];
+    }
+    if(Number===newnumber){
+       a.push(Number)
+    }
+}
+ console.log(a);
+ }
+palindrome(stringArray)
+
+f)Return median of two sorted arrays of the same size:
+
+1)Anonymous Function:
+var arr1=[2,3,4];
+var arr2=[5,6,7];
+var median = function(arr1, arr2){
+
+   if(arr1.length !== arr2.length){
+      console.log("unequal size");
+      return;
+   }
+   var combineArr = [];
+
+   for(let i=0 ; i<arr1.length;i++) {
+      combineArr.push(arr1[i])
+   }
+   for(let i=0 ; i<arr2.length;i++) {
+      combineArr.push(arr2[i])
+   }
+
+   combineArr.sort();
+
+   var length = combineArr.length;
+
+   var middle = length/2;
+
+   result = (combineArr[middle] + combineArr[middle+1] ) /2
+
+   console.log(result);
+}
+
+median(arr1,arr2);
+
+2)IIFE Function:
+(function(arr1, arr2){
+
+   if(arr1.length !== arr2.length){
+      console.log("unequal size");
+      return;
+   }
+   var combineArr = [];
+
+   for(let i=0 ; i<arr1.length;i++) {
+      combineArr.push(arr1[i])
+   }
+   for(let i=0 ; i<arr2.length;i++) {
+      combineArr.push(arr2[i])
+   }
+
+   combineArr.sort();
+
+   var length = combineArr.length;
+
+   var middle = length/2;
+
+   result = (combineArr[middle] + combineArr[middle+1] ) /2
+
+   console.log(result);
+})
+
+([2,3,4],[5,6,7])
+
+g)Remove duplicates from an array:
+
+1)Anonymous Function:
+var numbers=["mango","apple","mango","grape","mango","mango"]
+var dupicate=function(numbers){
+   var results=[]
+   for(let i=0;i<numbers.length;i++){
+      if(!results.includes(numbers[i])){
+         results.push(numbers[i]);
+      }
+   }
+   console.log(results)
+   
+}
+dupicate(numbers)
+
+2)IIFE Function:
+(function(numbers){
+   var results=[]
+   for(let i=0;i<numbers.length;i++){
+      if(!results.includes(numbers[i])){
+         results.push(numbers[i]);
+      }
+   }
+   console.log(results)
+   
+})
+(["mango","apple","mango","grape","mango","mango"])
+
+h)Rotate an array by k times:
+
+1)Anonymous Function:
+var arr=[12,34,56,89];
+var rotation=[3]
+
+var arrRotate = function(arr, rotation){
+   var newArray=[];
+      for(let i=rotation;i<arr.length;i++){
+         newArray.push(arr[i]);
+      }
+
+      for(let j=0;j<rotation;j++){
+         newArray.push(arr[j]);
+      }
+   console.log(newArray);
+}
+
+arrRotate(arr,rotation)
+
+2)IIFE Function:
+(function(arr, rotation){
+   var newArray=[];
+      for(let i=rotation;i<arr.length;i++){
+         newArray.push(arr[i]);
+      }
+
+      for(let j=0;j<rotation;j++){
+         newArray.push(arr[j]);
+      }
+   console.log(newArray);
+})
+([12,34,56,89],3)
+
+
+
+
+
+  
+
+
+
+
